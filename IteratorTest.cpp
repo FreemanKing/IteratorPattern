@@ -66,11 +66,15 @@ int main()
 {
 	List<BaseballPlayer>     * newYorkMetsLineup         = MakeNewYorkMetsLineup();
 	Iterator<BaseballPlayer> * newYorkMetsLineupIterator = newYorkMetsLineup->CreateIterator();
-    PrintLineup(std::string("New York Mets Lineup"), newYorkMetsLineupIterator);
-
+	PrintLineup(std::string("New York Mets Lineup"), newYorkMetsLineupIterator);
+	delete newYorkMetsLineupIterator;
+	delete newYorkMetsLineup;
+	
 	List<BaseballPlayer>     * washingtonNationalsLineup = MakeWashingtonNationalsLineup();
 	Iterator<BaseballPlayer> * washingtonNationalsLineupIterator = washingtonNationalsLineup->CreateIterator();
-    PrintLineup(std::string("Washington Nationals Lineup"), washingtonNationalsLineupIterator);
-
+	PrintLineup(std::string("Washington Nationals Lineup"), washingtonNationalsLineupIterator);
+	delete washingtonNationalsLineupIterator;
+	delete washingtonNationalsLineup;
+	
 	return 0;
 }
